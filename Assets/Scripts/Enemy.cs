@@ -92,5 +92,15 @@ public class Enemy : MonoBehaviour
             }
             OnDeath();
         }
+        if (other.tag == "Missile")
+        {
+            Destroy(other.gameObject);
+            if (_player != null)
+            {
+                int _randomScore = Random.Range(15, 30);
+                _player.AddScore(_randomScore);
+            }
+            OnDeath();
+        }
     }
 }

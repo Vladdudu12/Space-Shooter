@@ -48,6 +48,21 @@ public class Powerup : MonoBehaviour
                         player.ShieldsCollected();
                         break;
                     }
+                case 3:
+                    {
+                        player.AmmoCollected();
+                        break;
+                    }
+                case 4:
+                    {
+                        player.RepairCollected();
+                        break;
+                    }
+                case 5:
+                    {
+                        player.MissilesCollected();
+                        break;
+                    }
             }
             _powerUpSound.Play();
             Destroy(this.gameObject);
