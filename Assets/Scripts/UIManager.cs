@@ -18,6 +18,7 @@ public class UIManager : MonoBehaviour
     private Text _noAmmoText;
     [SerializeField]
     private Text _ammoText;
+    private bool _noAmmo = false;
     void Start()
     {
         _ammoText.text = "Ammo: " + 0;
@@ -41,6 +42,14 @@ public class UIManager : MonoBehaviour
     public void UpdateAmmo(int currentAmmo)
     {
         _ammoText.text = "Ammo: " + currentAmmo;
+        if(currentAmmo == 0)
+        {
+            _noAmmo = true;
+        }
+        else
+        {
+            _noAmmo = false;
+        }
     }
 
     public void GameOverSequence()
@@ -67,7 +76,7 @@ public class UIManager : MonoBehaviour
 
     IEnumerator NoAmmoFlickerEffect()
     {
-        while (true)
+        while (_noAmmo == true)
         {
             _noAmmoText.enabled = true;
             yield return new WaitForSeconds(0.5f);

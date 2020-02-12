@@ -87,6 +87,7 @@ public class Player : MonoBehaviour
         _thrusterSlider.value = _maxFuel;
         _fuel = _maxFuel;
         _ammoCount = _maxAmmo;
+        _uiManager.UpdateAmmo(_ammoCount);
         transform.position = Vector3.zero;
         float randomEngine = Random.value;
         if (randomEngine < 0.5f)
@@ -305,6 +306,7 @@ public class Player : MonoBehaviour
     {
         _ammoCount = _maxAmmo;
         _uiManager.UpdateAmmo(_ammoCount);
+        _reloadSound.Stop();
     }
 
     public void RepairCollected()
