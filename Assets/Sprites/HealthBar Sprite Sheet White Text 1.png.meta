@@ -1,0 +1,427 @@
+fileFormatVersion: 2
+guid: f1b4006791955c948bfd8f0129528389
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4474822429716882289
+    second: HealthBar Sprite Sheet White Text 1_0
+  - first:
+      213: 6048211365600049704
+    second: HealthBar Sprite Sheet White Text 1_1
+  - first:
+      213: 2119480974064359910
+    second: HealthBar Sprite Sheet White Text 1_2
+  - first:
+      213: 2407502689001360717
+    second: HealthBar Sprite Sheet White Text 1_3
+  - first:
+      213: -8825084801635735537
+    second: HealthBar Sprite Sheet White Text 1_4
+  - first:
+      213: -6655370264940475216
+    second: HealthBar Sprite Sheet White Text 1_5
+  - first:
+      213: 2984091186395122538
+    second: HealthBar Sprite Sheet White Text 1_6
+  - first:
+      213: -709650247097857629
+    second: HealthBar Sprite Sheet White Text 1_7
+  - first:
+      213: -3461577477431942560
+    second: HealthBar Sprite Sheet White Text 1_8
+  - first:
+      213: -2581537176616246657
+    second: HealthBar Sprite Sheet White Text 1_9
+  - first:
+      213: -3439245349708410754
+    second: HealthBar Sprite Sheet White Text 1_10
+  - first:
+      213: 7547842232317468334
+    second: HealthBar Sprite Sheet White Text 1_11
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HealthBar Sprite Sheet White Text 1_0
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 557
+        width: 388
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a35c35513494eda4eb552c55eca9a815
+      internalID: -4474822429716882289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBar Sprite Sheet White Text 1_1
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 554
+        width: 401
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b70eba9eebf471042a7e4ef484ec281f
+      internalID: 6048211365600049704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBar Sprite Sheet White Text 1_2
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 550
+        width: 404
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddb6dd7f5b87b2740b288b6d6deb41ec
+      internalID: 2119480974064359910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBar Sprite Sheet White Text 1_3
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 363
+        width: 389
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38634518440ac2844b51ec391e3c86f6
+      internalID: 2407502689001360717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBar Sprite Sheet White Text 1_4
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 358
+        width: 396
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01504468b2bf3354b824f7baefae35b1
+      internalID: -8825084801635735537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBar Sprite Sheet White Text 1_5
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 362
+        width: 401
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 535cd74a362571a4ead575a224058e40
+      internalID: -6655370264940475216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBar Sprite Sheet White Text 1_6
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 164
+        width: 384
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fc22e4679407ef4f95ce5a2b4d2862a
+      internalID: 2984091186395122538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBar Sprite Sheet White Text 1_7
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 163
+        width: 398
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22a803db1654d174fb5983ac501d3a16
+      internalID: -709650247097857629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBar Sprite Sheet White Text 1_8
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 165
+        width: 399
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31fb74e6a7012214faaa78eebb12409f
+      internalID: -3461577477431942560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBar Sprite Sheet White Text 1_9
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 0
+        width: 385
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2db4a9bd415a87e41bf028712ff931d6
+      internalID: -2581537176616246657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBar Sprite Sheet White Text 1_10
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 2
+        width: 394
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ab815c68bcf44449af0c146fc68f3ff
+      internalID: -3439245349708410754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBar Sprite Sheet White Text 1_11
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 400
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b08bdeb9fd1db4459c9fd0be493f86b
+      internalID: 7547842232317468334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: dbf31e34d6963b14b91032500e316877
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 7263106828255457595}
   - component: {fileID: 8481429993434190185}
   - component: {fileID: -6943010669713059963}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TripleShotPowerUp
-  m_TagString: Untagged
+  m_TagString: PowerUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,6 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 5
+  _magnetSpeed: 7
   _id: 0
 --- !u!50 &-6943010669713059963
 Rigidbody2D:

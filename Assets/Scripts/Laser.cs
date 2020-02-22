@@ -7,6 +7,7 @@ public class Laser : MonoBehaviour
     [SerializeField]
     private float _speed;
     private bool _isEnemyLaser = false;
+    private bool _isCircleLaser = false;
 
     void Update()
     {
@@ -23,7 +24,7 @@ public class Laser : MonoBehaviour
     void MoveUp()
     {
         transform.Translate(Vector3.up * _speed * Time.deltaTime);
-        if (transform.position.y > 7f)
+        if (transform.position.y > 10f)
         {
             if (this.transform.parent != null)
             {
@@ -38,16 +39,34 @@ public class Laser : MonoBehaviour
 
     void MoveDown()
     {
-        transform.Translate(Vector3.down * _speed * Time.deltaTime);
-        if (transform.position.y < -7f)
+        if (_isCircleLaser == true)
         {
-            if (this.transform.parent != null)
+            transform.Translate(Vector3.up * _speed * Time.deltaTime);
+            if (transform.position.y > 10f)
             {
-                Destroy(this.transform.parent.gameObject);
+                if (this.transform.parent != null)
+                {
+                    Destroy(this.transform.parent.gameObject);
+                }
+                else
+                {
+                    Destroy(this.gameObject);
+                }
             }
-            else
+        }
+        else
+        {
+            transform.Translate(Vector3.down * _speed * Time.deltaTime);
+            if (transform.position.y < -11f)
             {
-                Destroy(this.gameObject);
+                if (this.transform.parent != null)
+                {
+                    Destroy(this.transform.parent.gameObject);
+                }
+                else
+                {
+                    Destroy(this.gameObject);
+                }
             }
         }
     }
@@ -57,6 +76,10 @@ public class Laser : MonoBehaviour
         _isEnemyLaser = true;
     }
 
+    public void AssignCircleLaser()
+    {
+        _isCircleLaser = true;
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player" && _isEnemyLaser == true)

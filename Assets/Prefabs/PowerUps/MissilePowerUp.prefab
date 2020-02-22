@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8277649460059628076}
   - component: {fileID: 9158269794435024135}
   - component: {fileID: 909109326991282720}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MissilePowerUp
-  m_TagString: Untagged
+  m_TagString: PowerUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,4 +133,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 5
+  _magnetSpeed: 7
   _id: 5

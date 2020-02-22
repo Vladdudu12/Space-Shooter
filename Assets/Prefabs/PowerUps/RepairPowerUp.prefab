@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 1127849968523652373}
   - component: {fileID: 2983220661554672722}
   - component: {fileID: 8277856835710578851}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RepairPowerUp
-  m_TagString: Untagged
+  m_TagString: PowerUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,4 +133,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 5
+  _magnetSpeed: 7
   _id: 4

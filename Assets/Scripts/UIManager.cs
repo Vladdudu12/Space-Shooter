@@ -18,6 +18,17 @@ public class UIManager : MonoBehaviour
     private Text _noAmmoText;
     [SerializeField]
     private Text _ammoText;
+    [SerializeField]
+    private Text _congratulationsText;
+    [SerializeField]
+    private Text _defeatedBossText;
+    [SerializeField]
+    private Sprite[] _bossHealthBarSprites;
+    [SerializeField]
+    private Image _bossHealthBarDisplay;
+
+    [SerializeField]
+    private Text _waveText;
     private bool _noAmmo = false;
     void Start()
     {
@@ -27,6 +38,9 @@ public class UIManager : MonoBehaviour
         _gameOverText.enabled = false;
         _restartText.enabled = false;
         _noAmmoText.enabled = false;
+        _defeatedBossText.enabled = false;
+        _congratulationsText.enabled = false;
+        _waveText.enabled = false;
     }
 
     public void UpdateScore(int playerScore)
@@ -39,9 +53,26 @@ public class UIManager : MonoBehaviour
         _livesDisplay.sprite = _livesSprites[currentLives];
     }
 
-    public void UpdateAmmo(int currentAmmo)
+    public void UpdateWave(int currentWave)
     {
-        _ammoText.text = "Ammo: " + currentAmmo;
+        int showWave = currentWave + 1;
+        StartCoroutine(WaveRoutine(showWave));
+    }
+
+    IEnumerator WaveRoutine(int currentWave)
+    {
+        _waveText.text = "Wave " + currentWave;
+        _waveText.enabled = true;
+        yield return new WaitForSeconds(4f);
+        _waveText.enabled = false;
+    }
+    public void UpdateBossHealth(int currentHealth)
+    {
+        _bossHealthBarDisplay.sprite = _bossHealthBarSprites[currentHealth];
+    }
+    public void UpdateAmmo(int currentAmmo, int maxAmmo)
+    {
+        _ammoText.text = "Ammo: " + currentAmmo + "/" + maxAmmo;
         if(currentAmmo == 0)
         {
             _noAmmo = true;
@@ -58,6 +89,23 @@ public class UIManager : MonoBehaviour
         StartCoroutine(GameOverFlickerEffect());
     }
 
+    public void VictorySequence()
+    {
+        _defeatedBossText.enabled = true;
+        _restartText.enabled = true;
+        StartCoroutine(CongratulationsFlickerEffect());
+    }
+
+    IEnumerator CongratulationsFlickerEffect()
+    {
+        while(true)
+        {
+            _congratulationsText.enabled = true;
+            yield return new WaitForSeconds(1f);
+            _congratulationsText.enabled = false;
+            yield return new WaitForSeconds(1f);
+        }
+    }
     IEnumerator GameOverFlickerEffect()
     {
         while (true)

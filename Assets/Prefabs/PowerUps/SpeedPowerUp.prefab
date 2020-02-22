@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 3289727539989774006}
   - component: {fileID: 3847172116474882104}
   - component: {fileID: -429738200109791332}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SpeedPowerUp
-  m_TagString: Untagged
+  m_TagString: PowerUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,6 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 5
+  _magnetSpeed: 7
   _id: 1
 --- !u!50 &-429738200109791332
 Rigidbody2D:

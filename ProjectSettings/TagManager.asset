@@ -7,6 +7,12 @@ TagManager:
   - Laser
   - Enemy
   - Missile
+  - Barrier
+  - PowerUp
+  - BigLaser
+  - BossCircleLaser
+  - CircleLaser
+  - EnemyLaser
   layers:
   - Default
   - TransparentFX
@@ -17,8 +23,8 @@ TagManager:
   - 
   - 
   - Post Processing
-  - 
-  - 
+  - Player
+  - PowerUps
   - 
   - 
   - 

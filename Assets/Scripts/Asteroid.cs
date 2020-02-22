@@ -8,13 +8,13 @@ public class Asteroid : MonoBehaviour
     private float _rotateSpeed;
     [SerializeField]
     private GameObject _explosionPrefab;
-    private SpawnManager _spawnManager;
     private AudioSource _explosionSound;
+    private WaveManager _waveManager;
 
     void Start()
     {
+        _waveManager = GameObject.Find("WaveManager").GetComponent<WaveManager>();
         _explosionSound = GameObject.Find("Explosion").GetComponent<AudioSource>();
-        _spawnManager = GameObject.Find("SpawnManager").GetComponent<SpawnManager>();
     }
 
     void Update()
@@ -28,7 +28,7 @@ public class Asteroid : MonoBehaviour
         {
             Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
             Destroy(other.gameObject);
-            _spawnManager.StartSpawning();
+            _waveManager.StartNextWave();
             _explosionSound.Play();
             Destroy(this.GetComponent<Collider2D>());
             Destroy(this.gameObject, 0.25f);
