@@ -7127,7 +7127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - EnemiesPerWave: 5
-    PowerupsPerWave: 5
+    PowerupsPerWave: 10
     _powerups:
     - {fileID: 4481969037147179761, guid: af7bb20940a11e745b010e323be9aa22, type: 3}
     - {fileID: 7410170821742507622, guid: d0a074e4206e6384bbf9e02c325c3587, type: 3}
@@ -7153,7 +7153,7 @@ MonoBehaviour:
     _canSpawnSpecialPowerups: 0
     _isBossWave: 0
   - EnemiesPerWave: 6
-    PowerupsPerWave: 8
+    PowerupsPerWave: 15
     _powerups:
     - {fileID: 4481969037147179761, guid: af7bb20940a11e745b010e323be9aa22, type: 3}
     - {fileID: 7410170821742507622, guid: d0a074e4206e6384bbf9e02c325c3587, type: 3}
@@ -7179,7 +7179,7 @@ MonoBehaviour:
     _canSpawnSpecialPowerups: 0
     _isBossWave: 0
   - EnemiesPerWave: 7
-    PowerupsPerWave: 10
+    PowerupsPerWave: 20
     _powerups:
     - {fileID: 4481969037147179761, guid: af7bb20940a11e745b010e323be9aa22, type: 3}
     - {fileID: 7410170821742507622, guid: d0a074e4206e6384bbf9e02c325c3587, type: 3}
@@ -7205,7 +7205,7 @@ MonoBehaviour:
     _canSpawnSpecialPowerups: 1
     _isBossWave: 0
   - EnemiesPerWave: 8
-    PowerupsPerWave: 15
+    PowerupsPerWave: 25
     _powerups:
     - {fileID: 4481969037147179761, guid: af7bb20940a11e745b010e323be9aa22, type: 3}
     - {fileID: 7410170821742507622, guid: d0a074e4206e6384bbf9e02c325c3587, type: 3}
@@ -7231,7 +7231,7 @@ MonoBehaviour:
     _canSpawnSpecialPowerups: 1
     _isBossWave: 0
   - EnemiesPerWave: 10
-    PowerupsPerWave: 30
+    PowerupsPerWave: 40
     _powerups:
     - {fileID: 4481969037147179761, guid: af7bb20940a11e745b010e323be9aa22, type: 3}
     - {fileID: 7410170821742507622, guid: d0a074e4206e6384bbf9e02c325c3587, type: 3}

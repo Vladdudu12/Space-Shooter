@@ -14,13 +14,14 @@ public class Missile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _rb = GetComponent<Rigidbody2D>();   
+        _rb = GetComponent<Rigidbody2D>();
+        _target = FindClosestEnemy();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        _target = FindClosestEnemy();
         if (_target != null)
         {
             Vector3 direction = (_target.position - transform.position).normalized;
@@ -29,8 +30,8 @@ public class Missile : MonoBehaviour
         }
         else
         {
-            Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
-            Destroy(this.gameObject);
+           Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
+           Destroy(this.gameObject);
         }
 
         if (transform.position.y < -5.90f)
@@ -42,24 +43,53 @@ public class Missile : MonoBehaviour
     private Transform FindClosestEnemy()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        float minDistance = Mathf.Infinity;
+        int i = 0;
         Transform closest;
 
         if (enemies.Length == 0)
             return null;
-
-        closest = enemies[0].transform;
-        for (int i = 1; i < enemies.Length; i++)
+        while (i < enemies.Length)
         {
-            float distance = (enemies[i].transform.position - transform.position).sqrMagnitude;
-
-            if(distance <minDistance)
+            if (enemies[i].name == "Enemy(Clone)" || enemies[i].name == "Right_Enemy(Clone)" || enemies[i].name == "Left_Enemy(Clone)")
             {
-                closest = enemies[i].transform;
-                minDistance = distance;
+                if (enemies[i].GetComponent<Enemy>().CheckSeek() == true)
+                {
+                    enemies[i].GetComponent<Enemy>().Seeking();
+                    closest = enemies[i].transform;
+                    return closest;
+                }
+
             }
+            else if (enemies[i].name == "SmartEnemy(Clone)")
+            {
+                if (enemies[i].GetComponent<SmartEnemy>().CheckSeek() == true)
+                {
+                    enemies[i].GetComponent<SmartEnemy>().Seeking();
+                    closest = enemies[i].transform;
+                    return closest;
+                }
+            }
+            else if (enemies[i].name == "RotatingEnemy")
+            {
+                if (enemies[i].GetComponent<RotatingEnemy>().CheckSeek() == true)
+                {
+                    enemies[i].GetComponent<RotatingEnemy>().Seeking();
+                    closest = enemies[i].transform;
+                    return closest;
+                }
+            }
+            else if (enemies[i].name == "OrganicShip(Clone)")
+            {
+                if (enemies[i].GetComponent<BossAI>().CheckSeek() == true)
+                {
+                    enemies[i].GetComponent<BossAI>().Seeking();
+                    closest = enemies[i].transform;
+                    return closest;
+                }
+            }
+            i++;
         }
-        return closest;
+        return null;
     }
 
 }

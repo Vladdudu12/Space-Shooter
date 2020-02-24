@@ -7,6 +7,7 @@ public class SmartEnemy : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField]
     private float _speed;
+    private bool _canSeek = true;
     [SerializeField]
     private GameObject _energyBallPrefab;
     private bool _isDead = false;
@@ -76,6 +77,19 @@ public class SmartEnemy : MonoBehaviour
     public void ShouldDodge()
     {
         _canDodge = true;
+    }
+
+    public void Seeking()
+    {
+        if(_isDead == false)
+        {
+            _canSeek = false;
+        }
+    }
+
+    public bool CheckSeek()
+    {
+        return _canSeek;
     }
 
     void OnDeath()

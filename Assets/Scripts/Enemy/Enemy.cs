@@ -33,6 +33,7 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private bool _canBackShot = false;
     private bool _canFrontShot = false;
+    private bool _canSeek = true;
     #endregion
 
     #region ScriptManagement
@@ -146,7 +147,6 @@ public class Enemy : MonoBehaviour
         }
     }
 
-
     public void FireLaserFront()
     {
         if (_isDead == false && _canFrontShot == true)
@@ -238,6 +238,20 @@ public class Enemy : MonoBehaviour
         Destroy(GetComponent<Collider2D>());
         _waveManager.EnemyDefeated();
         Destroy(this.gameObject, 2.5f);
+    }
+
+
+    public void Seeking()
+    {
+        if(_isShieldActive == false && _isDead == false)
+        {
+            _canSeek = false;
+        }
+    }
+
+    public bool CheckSeek()
+    {
+        return _canSeek;
     }
 
     void OnTriggerEnter2D(Collider2D other)

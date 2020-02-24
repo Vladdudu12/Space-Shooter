@@ -6,6 +6,7 @@ public class BossLaser : MonoBehaviour
 {
     // Start is called before the first frame update
     private Animator _camAnim;
+    private GameObject _boss;
     void Start()
     {
         _camAnim = GameObject.Find("Main Camera").GetComponent<Animator>();

@@ -5,6 +5,7 @@ using UnityEngine;
 public class RotatingEnemy : MonoBehaviour
 {
     // Start is called before the first frame update
+    private bool _canSeek = true;
     [SerializeField]
     private float _rotationSpeed;
     private bool _goingRight = true;
@@ -30,7 +31,6 @@ public class RotatingEnemy : MonoBehaviour
         _player = GameObject.Find("Player").GetComponent<Player>();
         _laserSound = GetComponent<AudioSource>();
         _explosionSound = GameObject.Find("Explosion").GetComponent<AudioSource>();
-
     }
 
     // Update is called once per frame
@@ -61,6 +61,19 @@ public class RotatingEnemy : MonoBehaviour
             if(_enemyLaser != null)
             _enemyLaser.transform.Rotate(0f, 0f, 1f * (_rotationSpeed / 2) * Time.deltaTime);
         }
+    }
+
+    public void Seeking()
+    {
+        if (_isDead == false)
+        {
+            _canSeek = false;
+        }
+    }
+
+    public bool CheckSeek()
+    {
+        return _canSeek;
     }
 
     void OnDeath()

@@ -13,6 +13,7 @@ TagManager:
   - BossCircleLaser
   - CircleLaser
   - EnemyLaser
+  - BossEnergyLaser
   layers:
   - Default
   - TransparentFX

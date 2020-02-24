@@ -47,6 +47,7 @@ public class BossAI : MonoBehaviour
     private bool _isInvincible;
     private bool _canGetShot;
     private bool _canShake = false;
+    private bool _canSeek;
     void Start()
     {
         _bassySound = GameObject.Find("Bassy").GetComponent<AudioSource>();
@@ -94,6 +95,7 @@ public class BossAI : MonoBehaviour
                 _gameManager.GameOver();
                 _dropSound.Stop();
                 StartCoroutine(DestroyHealthBar());
+                StartCoroutine(DestroyProjectile());
                 StartCoroutine(OnDeathSequence());
             }
         }
@@ -114,7 +116,26 @@ public class BossAI : MonoBehaviour
         Instantiate(_bigExplosionPrefab, transform.position, Quaternion.identity);
         _uiManager.VictorySequence();
         Destroy(this.gameObject, 0.3f);
-        
+    }
+
+    IEnumerator DestroyProjectile()
+    {
+        GameObject bigLaser = GameObject.FindWithTag("BigLaser");
+        if (bigLaser != null)
+            Destroy(bigLaser.gameObject);
+        yield return new WaitForSeconds(0.5f);
+        GameObject circleLaser = GameObject.FindWithTag("BossCircleLaser");
+        if (circleLaser != null)
+            Destroy(circleLaser.gameObject);
+        yield return new WaitForSeconds(0.5f);
+        GameObject[] energyBall = GameObject.FindGameObjectsWithTag("BossEnergyLaser");
+        if (energyBall.Length > 0)
+        {
+            for (int i = 0; i < energyBall.Length; i++)
+            {
+                Destroy(energyBall[i].gameObject);
+            }
+        }
     }
     IEnumerator StartSequence()
     {
@@ -191,12 +212,27 @@ public class BossAI : MonoBehaviour
         _enemies = GameObject.FindGameObjectsWithTag("Enemy");
         if (_enemies.Length > 1 && _canGetShot == true)
         {
+            _canSeek = false;
             _isInvincible = true;
         }
         else
         {
+            _canSeek = true;
             _isInvincible = false;
         }
+    }
+
+    public void Seeking()
+    {
+        if (_isDead == true)
+        {
+            _canSeek = false;
+        }
+    }
+
+    public bool CheckSeek()
+    {
+        return _canSeek;
     }
 
     void OnTriggerEnter2D(Collider2D other)
